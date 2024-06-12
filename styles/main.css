@@ -1,0 +1,210 @@
+.poppins-thin {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight-italic {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light-italic {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black-italic {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+body {
+  background-color: rgb(52, 53, 58);
+  color: white;
+  font-family: 'poppins', sans-serif;
+}
+
+header {
+  font-family: 'poppins', sans-serif;
+  font-weight: 600;
+  margin: auto;
+  margin-top: 10pt;
+  max-width: 50%;
+  text-align: center;
+}
+
+ul {
+  margin: 0pt;
+  padding: 0pt;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+li {
+  color: rgb(155, 155, 155);
+  display: inline-block;
+  margin: auto;
+  padding: 0pt;
+  max-width: 50%;
+  min-width: 20%;
+}
+
+header a:link {
+  color: rgb(155, 155, 155);
+  text-decoration: none;
+}
+
+header a:visited {
+  color: rgb(155, 155, 155);
+  text-decoration: none;
+}
+
+header a:focus {
+  color: white;
+  text-decoration: none;
+}
+
+header a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+header a:active {
+  color: white;
+  text-decoration: none;
+}
+
+.image-text-section {
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  gap: 40px;
+}
+
+.image-text-section img {
+  max-width: 50%;
+  padding-left: 5%;
+  height: auto;
+}
+
+.margin-remove {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* widescreen displays */
+@media only screen and (min-width: 920px) {
+  li {
+  }
+}
+
+/* tablets */
+@media (max-width: 760px) {
+  main {
+    background-color: blue;
+  }
+  .image-text-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .image-text-section img {
+    max-width: 100%;
+    margin-bottom: 20x;
+  }
+}
+/* phones */
+@media (max-width: 360px) {
+  li {
+    scale: 60%;
+  }
+}
