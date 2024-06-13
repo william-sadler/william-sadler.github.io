@@ -179,27 +179,53 @@ main {
   padding: 0;
 }
 
+.background-image {
+  background-image: linear-gradient(
+    rgba(29, 28, 33, 0.1),
+    rgba(29, 28, 33, 0.116)
+  ),
+  url(/images/stock-mountains.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
 /* Welcome Section */
 .image-text-section {
   background-color: rgb(52, 53, 58);
   display: flex;
-  align-items: flex-start;
+  align-items: flex-start;  /* Align items to the top */
   gap: 70px;
-  height: 45vw;
+  min-height: 45vw;        /* Use min-height for flexibility */
+  padding: 20px;           /* Add padding for visual spacing */
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .image-text-section img {
   max-width: 50%;
-  padding-left: 10%;
-  height: 100%;
-  justify-content: flex-end;
+  height: auto;            /* Maintain aspect ratio */
+  object-fit: contain;     /* Ensure image fits within container */
+  margin: auto;        /* Push image to the right */
+  margin-right: 0;
 }
 
 .welcome-text {
   display: flex;
   flex-direction: column;
-  position: relative;
-  top: 20%;
+  max-width: 50%;          /* Limit text area width */
+  margin: auto;         /* Vertically center text if needed */
+  margin-left: 0;
+}
+
+/* Optional: Text styling */
+.welcome-text h1 {
+  color: white;
+  margin-bottom: 15px; /* Adjust spacing as needed */
+}
+
+.welcome-text p {
+  color: white;
+  line-height: 1.6;  /* Improve readability */
 }
 
 /* Blog Section */
@@ -349,6 +375,7 @@ main {
     gap: 2%;
     scale: 100%;
     padding-top: 100px;
+    height: auto;
   }
   .blog-list {
     width: 45%;
@@ -371,18 +398,23 @@ main {
     flex-direction: column;
     text-align: center;
     height: auto;
-    padding: 0;
   }
   .image-text-section img {
-    max-width: 100%;
-    margin-bottom: 20x;
-    padding: 0;
+    max-width: 90%;
+    margin: auto;
+    padding: 20px;
+  }
+  .welcome-text {
+    padding: 50px;
+    margin: auto;
   }
   .blog-section {
     flex-direction: column;
   }
   .blog-list {
-    width: 100%;
+    width: 95%;
+    margin: auto;
+    padding: auto;
   }
   .flex-box-center {
     margin-bottom: 40px;
@@ -394,6 +426,15 @@ main {
 @media (max-width: 360px) {
   .header-nav-li {
     padding: 0;
+  }
+  .image-text-section img {
+    max-width: 90%;
+    margin: auto;
+    padding: 0;
+  }
+  .welcome-text {
+    padding: auto;
+    margin: auto;
   }
   .blog-list nav {
     padding: 5px;
