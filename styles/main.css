@@ -210,7 +210,7 @@ main {
   list-style-type: none;
 }
 
-.blog-list-tc li {
+.blog-list-tc li a {
   font-size: 14px;
   display: flex;
   align-items: center;
@@ -242,6 +242,7 @@ main {
   text-overflow: ellipsis;
   white-space: nowrap;
   font-weight: 700;
+  color: white !important;
   order: 3;
 }
 
