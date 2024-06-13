@@ -179,6 +179,19 @@ main {
   padding: 16px 32px 32px 32px;
 }
 
+/* Welcome Section */
+.image-text-section {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.image-text-section img {
+  max-width: 50%;
+  padding-left: 5%;
+  height: auto;
+}
+
 /* Blog Section */
 .blog-section {
   display: flex;
@@ -252,18 +265,7 @@ main {
   text-decoration: none;
 }
 
-.image-text-section {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-
-.image-text-section img {
-  max-width: 50%;
-  padding-left: 5%;
-  height: auto;
-}
-
+/* Misc Classes */
 .margin-remove {
   margin-top: 0px;
   margin-bottom: 0px;
