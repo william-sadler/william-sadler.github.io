@@ -212,32 +212,43 @@ main {
 
 .blog-list-tc li {
   font-size: 14px;
-  list-style-type: none;
   display: flex;
   align-items: center;
   margin-bottom: 10px;
-}
-
-.title {
-  margin-right: 1%;
-  font-weight: 700;
+  gap: 1%;
 }
 
 .date {
+  flex: 0 0 30px;
+  white-space: nowrap;
   font-size: 10px;
-  margin-right: 1%;
   color: rgb(125, 125, 125);
+  order: 1;
 }
 
 .description {
+  flex: 0 0 20%;
+  white-space: nowrap;
   font-size: 10px;
-  margin-right: 15%;
   color: rgb(125, 125, 125);
+  order: 2;
+}
+
+.title {
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 700;
+  order: 3;
 }
 
 .read-more {
+  flex: 0 0 auto;
   font-size: 15px;
-  margin-left: auto;
+  order: 4;
 }
 
 .blog-list a:link {
