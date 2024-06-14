@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML CSS</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="../styles/main.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" />
+  </head>
+  <header>
+    <!-- Navigation Bar -->
+    <nav class="header-nav-wrapper">
+      <ul class="header-nav-ul">
+        <li class="header-nav-li">
+          <a href="https://william-sadler.github.io/#">Home</a>
+        </li>
+        <li class="header-nav-li">
+          <a href="https://william-sadler.github.io/#blog">Blog</a>
+        </li>
+        <li class="header-nav-li">
+          <a href="https://william-sadler.github.io/#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- Navigation Bar -->
+    </header>
+    <body>
+    <main class="blog-body "> <!-- Main Blog Post -->
+      <div class="blog-background-img">
+      <div class="blog-header">
+        <h1>
+          What are the differences</br>
+          between relative, absolute,</br>
+          and fixed positioning?
+        </h1>
+      </div>
+      <div class="blog-subheader">
+        <h2>William | Jun 14, 2024</h2>
+      </div>
+    </div> <!-- Blog image -->
+      <article class="blog-article">
+        <section class="blog-article-section">
+        <div> 
+          <p>
+            In this blog post we'll be discussing the CSS position property and
+            it's values. As the name suggests, the position property defines the
+            positioning of an "element" in an html document for a website's
+            design, using a specified value. These values include:
+          </p>
+          <ul>
+            <li>Static</li>
+            <li>Relative</li>
+            <li>Fixed</li>
+            <li>Absolute</li>
+            <li>Sticky</li>
+          </ul>
+          <p>
+            While there are a fair few different types of values for the
+            position property, for this blog post, we'll only be discussing the
+            most common values that are used within almost every modern website.
+          </p>
+        </div>
+        <div>
+          <h3>What is Relative positioning?</h3>
+          <!-- RELATIVE -->
+          <p>
+            The relative value is fairly self-explanatory. When used in a
+            position property, it denotes the type of positioning of an element
+            that is "relative" to its original location in the document. That
+            may sound like a mouthful… But let me explain!
+          </p>
+          <p>
+            Let's say you wanted to move a plant pot a little to left from where
+            it is currently. While you may just pick up the plant pot and move
+            it over a little, websites aren't as smart as we are. First, we need
+            to define how we want to move it! Some questions the website would
+            ask are: move from where it was? Move from the where the floor is?
+            Move from where you are looking? These are all important values to
+            define for the website to understand what you are trying to do with
+            your element, or in this case, your plant pot.
+          </p>
+          <section class="blog-example">
+            <pre><code class="language-css">
+.plantpot-relative {
+  position: relative;
+  top: 30px;
+  left: 50px;
+  padding: 70px; 
+  border: 5px solid #9a54c5;
+}
+          </code></pre>
+          <div class="plantpot-relative">
+            <div class="old-relative">
+            </div>
+            <div></div>  
+          </div>
+        </section>
+          <!-- Example -->
+          <p>
+            In this example, you can clearly see the original position in a
+            faded color and it's new position in the purple color! We moved the
+            plant pot 50 pixels away from the left and 30 pixels away from the
+            top of where it was originally placed.
+          </p>
+          <p>
+            It's important to note that when we specify the direction and
+            distance, we will always be defining those directions as "the
+            distance away from it". So if you defined 50px with the left
+            direction, you are actually moving the plant pot further to the
+            right of its original position. Which is why we say "away from the
+            left", to make it easier to understand, so you don't trip yourself
+            up and wonder why your plant pot is in the wall.
+          </p>
+        </div>
+        <div>
+          <h3>What is Absolute positioning?</h3>
+          <!-- ABSOLUTE -->
+          <p>
+            The absolute positioning value, while not as simple as relative
+            positioning, it is still pretty easy to understand. It's difficult
+            to explain what absolute positioning is, with how it's named.
+            However, the best I can do is say that instead of the position being
+            relative to its original location, we are defining a "child element"
+            absolutely in relationship to its "parent element". That's a lot to
+            understand, but let's walk this through once more!
+          </p>
+          <p>
+            let's say you have some flowers (child element), and you'd like to
+            put them into the plant pot (parent element) that you just moved!
+            Once you've placed these flowers inside the pot, it seems like you
+            placed them a little off center, so you move the flowers around a
+            little to make sure they are neatly placed in the correct position
+            inside your plant pot. In this case, websites are pretty smart; they
+            already understand the flowers are inside the plant pot, but what
+            they don't understand is that you want to move them around a little!
+            They also have no clue how you want to move them around. Some
+            questions the website ask are: Where are you moving them from?
+            Relative to its original position? Or based on a container your
+            flowers are inside of (the plant pot) instead? So let's give it a
+            try!
+          </p>
+          <section class="blog-example">
+            <pre><code class="language-css">
+.plantpot-relative {
+  position: relative;
+  top: 30px;
+  left: 50px;
+  padding: 100px;
+  border 5px solid #9a54c5;
+}
+.flowers-absolute {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  padding: 45px;
+  border-radius: 50%;
+  border: 5px solid #f7b424;
+}
+          </code></pre>
+          <div class="plantpot-relative-hidden">
+            <div class="flowers-absolute"> <!-- div -->
+            </div>
+          </div>
+        </section>
+          <!-- Example -->
+          <p>
+            In this example, you can clearly see that the orange flowers
+            (the child element) have been positioned 20 pixels away from the
+            right and 20 pixels away from the bottom of the purple plant pot
+            (the parent element). Notice how the position of the flowers is
+            entirely dependent on the position of the plant pot? If we were to
+            move the plant pot, the flowers would move along with it,
+            maintaining their "absolute" position in relationship to the pot!
+          </p>
+          <section class="blog-example">
+            <pre><code class="language-css">
+.plantpot-relative {
+  position: relative;
+  top: 70px;
+  left: 30px;
+  padding: 100px;
+  border 5px solid #9a54c5;
+}
+.flowers-absolute {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  padding: 45px;
+  border-radius: 50%;
+  border: 5px solid #f7b424;
+}
+          </code></pre>
+          <div class="plantpot-relative-hidden" style="top: 70px; left: 50px;">
+            <div class="flowers-absolute"> <!-- div -->
+            </div>
+            <div class="old-hidden-relative"></div>
+          </div>
+        </section>
+          <!-- Example -->
+          <p>
+            This is the main difference between relative and absolute
+            positioning. Relative positioning moves an element dependent on its
+            original location, while absolute positioning moves an element
+            dependent on the parent elements positioning (in this case, the
+            plant pot). If there is no positioned parent element, the element is
+            positioned in relationship to the next positioned parent element,
+            which is usually the HTML document itself (in this case, the house).
+          </p>
+          <p>
+            It's important to understand that when we are defining the absolute
+            value, CSS doesn't know which element you want it to be paired with
+            unless you define the parent element with the position property,
+            which it should have the "relative" value applied to it. Even if the
+            parent element does not need to be positioned, it still requires the
+            "relative" value so that the child element understands where it's
+            placement should be.
+          </p>
+        </div>
+        <div>
+          <h3>What is Fixed positioning?</h3>
+          <!-- FIXED -->
+          <p>
+            Fixed positioning, unlike its relative and absolute counterparts, it
+            can be a bit trickier to grasp. While other values base their
+            positioning on visible elements within the HTML document, fixed
+            positioning takes a different approach. It positions an element
+            based on the viewport (the visible area of your browser), completely
+            detached from the normal flow of the document. Let's break down this
+            concept once again!
+          </p>
+          <p>
+            Imagine a sticker (child element). You place this sticker on the
+            window of a car door (think of this as the viewport). Now, picture
+            yourself driving down the road. The scenery outside is whizzing by –
+            trees, buildings, mountains – everything is in motion. But the
+            sticker? It remains stubbornly "fixed" in the exact spot where you
+            placed it on the window!
+          </p>
+          <p>
+            In a website, the concept is very similar, but with a few nuances.
+            If you simply placed the sticker on your house (html document), as
+            you drove away, the sticker would vanish from sight. Similarly, in a
+            website, you need to specify where on the viewport (the "window" of
+            the website) you've placed the sticker! If you don't, it might end
+            up on the car door, or even your seat – technically still on the
+            car, but completely out of view from your window (the viewport).
+          </p>
+          <p>
+            Since you, the web developer, are essentially the "person in the
+            car" in this analogy, and the window represents the visible website
+            area, the sticker (your element) needs to be positioned within that
+            viewable area for users to see it!
+          </p>
+          <section class="blog-example">
+            <pre><code class="language-css">
+.sticker-fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+          </code></pre>
+          <div class="viewport-fixed">
+            <div class="sticker-fixed">
+              I'm a fixed Element
+            </div>
+          </div>
+        </section>
+          <!-- Example -->
+          <p>
+            In this example, you can clearly see that the sticker is positioned
+            20 pixels away from the bottom and 20 pixels away from the right
+            edge of the "viewport" (your window), regardless of how much the
+            user scrolls or resizes the window. It's like a constant companion,
+            always there in the corner of their eye as they navigate website.
+          </p>
+          <!-- You may have noticed to the bottom right, there is a button. That’s a fixed element! -->
+          <p>
+            Fixed positioning is your go-to tool when you need an element to
+            stay put on the screen, regardless of user interaction. This can be
+            incredibly useful for navigation menus, chat widgets, social media
+            icons, or any element that you want to remain consistently
+            accessible.
+          </p>
+          <p>
+            It's important to understand that unlike relative and absolute
+            positioning, fixed positioning doesn't rely on a parent-child
+            relationship or any reference to other elements within the html
+            document. It operates independently, taking its cues directly from
+            the viewport!
+          </p>
+          <p>
+            This means you don't need to worry about applying position: relative
+            to any parent elements when working with fixed positioning. Simply
+            apply `position: fixed` to the element itself, along with the
+            desired top, bottom, left, or right values to specify its exact
+            location within the viewport.
+          </p>
+          <p>
+            Keep in mind that fixed elements can overlap other content on the
+            page as the user scrolls, so be mindful of their placement to avoid
+            obstructing important information or functionality.
+          </p>
+        </div>
+        <div>
+          <h3>In conclusion</h3>
+          <!-- CONCLUSION -->
+          <p>
+            Understanding the nuances of CSS positioning is crucial for anyone
+            looking to craft visually appealing and user-friendly websites.
+            Whether you need to shift elements slightly with relative
+            positioning, precisely place elements within parent containers using
+            absolute positioning, or design elements that remain ever-present on
+            the screen with fixed positioning, the possibilities are endless.
+          </p>
+          <p>
+            Remember, choosing the right positioning method depends entirely on
+            your specific design goals. Experiment, practice, and don't be
+            afraid to combine these techniques to achieve the perfect layout!
+            With a solid grasp of CSS positioning, you'll unlock a new level of
+            control and creativity in your web development journey.
+          </p>
+          <p>
+            I hope this guide has shed light on the fascinating world of CSS
+            positioning. Now go forth and create stunning websites that leave a
+            lasting impression!
+          </p>
+        </div>
+      </section>
+      </article>
+      <hr>
+    </main>
+    <div class="imafixedelement">I'm a fixed Element<!-- I'm going to be a fixed element! --></div>
+    <footer id="contact">
+      I'm a footer
+    </footer>
+  </body>
+  <!-- Body -->
+</html>
