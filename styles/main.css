@@ -260,17 +260,18 @@ main {
 
 .blog-list {
   width: 90%;
+  height: 90%;
 }
 
 .blog-list nav {
   background-color: rgb(45, 41, 55);
   border-radius: 5px;
-  padding: 5px 55px 70px 5px;
-  height: 45%;
+  padding: 10px 55px 30px 5px;
   margin-bottom: 10px;
   margin-top: 10px;
   box-shadow: 100px rgb(0, 0, 0);
   border: 1px solid rgb(81, 81, 81);
+  overflow: scroll;
 }
 
 .blog-list-tc {
