@@ -390,6 +390,19 @@ main {
   display: flex;
   flex-direction: column;
 }
+.blog-background-img-IVS {
+  background-image: linear-gradient(
+      rgba(13, 17, 23, 0.842),
+      rgba(13, 17, 23, 0.637)
+    ),
+    url(/images/black-white-background-with-tree-stock.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 95vh; /* background covers viewport height */
+  display: flex;
+  flex-direction: column;
+}
 
 .blog-body {
   position: relative;
@@ -400,7 +413,7 @@ main {
 .blog-header {
   display: flex;
   margin: auto;
-  font-size: calc(1rem + 2vw);
+  font-size: calc(1rem + 1.5vw);
 }
 
 .blog-subheader {
