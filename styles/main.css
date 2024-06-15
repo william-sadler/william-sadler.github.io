@@ -377,6 +377,20 @@ main {
   flex-direction: column;
 }
 
+.blog-background-img-LP {
+  background-image: linear-gradient(
+      rgba(13, 17, 23, 0.842),
+      rgba(13, 17, 23, 0.637)
+    ),
+    url(/images/learning-plan-stock.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 95vh; /* background covers viewport height */
+  display: flex;
+  flex-direction: column;
+}
+
 .blog-body {
   position: relative;
   z-index: 1;
@@ -411,6 +425,9 @@ main {
 
 .blog-article-section h3 {
   font-size: 2rem;
+}
+.blog-article-section h4 {
+  font-size: 1.5rem;
 }
 
 .blog-example {
