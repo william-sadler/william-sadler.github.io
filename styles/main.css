@@ -412,6 +412,7 @@ main {
 
 .blog-article {
   margin: 5% 20%;
+  color: #e6edf3 !important;
 }
 .blog-article p {
   line-height: 1.6;
