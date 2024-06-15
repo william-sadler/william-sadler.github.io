@@ -265,7 +265,7 @@ main {
 .blog-list nav {
   background-color: rgb(45, 41, 55);
   border-radius: 5px;
-  padding: 5px 50px 25px 5px;
+  padding: 5px 55px 70px 5px;
   height: 45%;
   margin-bottom: 10px;
   margin-top: 10px;
@@ -279,7 +279,6 @@ main {
 
 .blog-button {
   margin-bottom: 10px;
-  padding: 5%;
   border: 1px solid rgba(145, 145, 145, 0.4);
   border-radius: 5px;
   box-shadow: 0 3px 8px 0 rgb(36, 36, 36);
@@ -297,6 +296,7 @@ main {
   display: flex;
   align-items: center;
   gap: 1%;
+  padding: 5%;
 }
 
 .date {
