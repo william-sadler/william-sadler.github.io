@@ -193,8 +193,6 @@ main {
   background-color: #121212;
   min-height: 45vw; /* Use min-height for flexibility */
   padding: 20px; /* Add padding for visual spacing */
-  margin-left: 10%;
-  margin-right: 10%;
 }
 
 .about-section img {
@@ -203,13 +201,13 @@ main {
       rgba(87, 87, 87, 0.959)
     ),
     url(/images/Portfolio_Photo.png);
-  background-size: contain;
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   height: 350px;
   width: 350px;
   border: 2px solid #464646;
   border-radius: 50px;
-  margin-left: 30px;
   margin-top: -190px;
 }
 
@@ -236,6 +234,7 @@ main {
 }
 .l1-coloumn-1 p {
   color: #7a7a7a;
+  font-size: calc(0.5rem + 0.5vw);
   font-weight: 300;
   margin: 30px 5px;
   max-width: 490px;
@@ -262,7 +261,6 @@ main {
 }
 
 .l1-c1-l1 span {
-  font-size: calc(0.4rem + 0.5vw);
   font-weight: 500;
   margin-top: 70px;
   position: absolute;
@@ -337,21 +335,23 @@ main {
 
 .line-2 {
   display: flex;
-  flex: 1;
   flex-direction: row;
-  justify-content: left;
-  margin: auto;
   gap: 5%;
-  margin-left: 100px;
   margin-top: 70px;
+  max-width: 55%;
+  justify-content: center;
 }
 
 .line-3 {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   gap: 10%;
   margin-left: 100px;
   margin-top: 80px;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  max-width: 85%;
 }
 .l3-counter {
   font-size: calc(1rem + 1vw);
@@ -843,6 +843,10 @@ main {
     gap: 2%;
     scale: 100%;
     padding-top: 100px;
+  }
+  .l1-c1-l1 span {
+    position: absolute;
+    right: calc(1% + 1vw);
   }
   .blog-list {
     width: 50%;
