@@ -185,14 +185,120 @@ header a:active {
 
 /* Main Section */
 main {
+  background-color: #121212;
   padding: 0;
 }
 
 /* About Section */
 .about-section {
-  background-color: #121212;
+  position: relative;
+  right: 0px;
+  bottom: 0px;
+  overflow: hidden;
   min-height: 45vw; /* Use min-height for flexibility */
   padding: 20px; /* Add padding for visual spacing */
+  z-index: 4;
+}
+.raindrop-background {
+  position: absolute;
+  min-height: 80vh;
+  width: 100vw;
+  top: 10;
+  left: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.raindrop-background::before,
+.raindrop-background::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0;
+  --top: calc(50% + (var(--random-top) * 2px));
+  --left: calc(50% + (var(--random-left) * 2px));
+  top: var(--top);
+  left: var(--left);
+  pointer-events: none; /* Ripples don't interfere with interaction */
+  animation: ripple 5s linear; /* Animation repeats once */
+  z-index: -1;
+}
+
+/* Randomized ripples */
+.raindrop-background::before {
+  --random-top: 120;
+  --random-left: -130;
+  animation-delay: 0s;
+}
+.raindrop-background::after {
+  --random-top: -115;
+  --random-left: 290;
+  animation-delay: 5s;
+}
+.raindrop-background:nth-child(1)::before {
+  --random-top: 110;
+  --random-left: -290;
+  animation-delay: 10s;
+}
+.raindrop-background:nth-child(1)::after {
+  --random-top: -35;
+  --random-left: -190;
+  animation-delay: 15s;
+}
+.raindrop-background:nth-child(2)::before {
+  --random-top: 160;
+  --random-left: 130;
+  animation-delay: 20s;
+}
+.raindrop-background:nth-child(2)::after {
+  --random-top: -5;
+  --random-left: -40;
+  animation-delay: 25s;
+}
+.raindrop-background:nth-child(3)::before {
+  --random-top: -150;
+  --random-left: -290;
+  animation-delay: 30s;
+}
+.raindrop-background:nth-child(3)::after {
+  --random-top: -15;
+  --random-left: 100;
+  animation-delay: 35s;
+}
+.raindrop-background:nth-child(4)::before {
+  --random-top: 200;
+  --random-left: 200;
+  animation-delay: 40s;
+}
+.raindrop-background:nth-child(4)::after {
+  --random-top: 50;
+  --random-left: 260;
+  animation-delay: 45s;
+}
+
+@keyframes ripple {
+  0% {
+    border: 5px solid #e6e6e6c9; /* ripple Color */
+    width: 0; /* The initial size of the ripple */
+    height: 0;
+    transform: translate(-50%, -50%) scale(0);
+    transform-origin: center;
+    opacity: 1;
+  }
+  95% {
+    width: 1000px;
+    height: 1000px;
+    opacity: 0.1;
+    border: 5px solid #42424250;
+  }
+  100% {
+    border: 5px solid #3d3d3d2d;
+    width: 1000px; /* The final size of the ripple */
+    height: 1000px;
+    transform: translate(-50%, -50%) scale(1);
+    transform-origin: center;
+    opacity: 0;
+  }
 }
 
 .about-section img {
@@ -209,6 +315,7 @@ main {
   border: 2px solid #464646;
   border-radius: 50px;
   margin-top: -190px;
+  z-index: 1;
 }
 
 .line-1 {
@@ -424,15 +531,15 @@ main {
     url(/images/stock-mountains.png);
   background-repeat: no-repeat;
   background-size: 100%;
-  min-height: 95vh; /* Ensure minimum height of 95% viewport height */
+  min-height: 95vh; /* Ensures the minimum height of the 95% viewport height */
   padding: 50px 20px; /* Adds padding for better visuals */
 }
 
 .blog-content {
-  display: flex; /* Enables flexbox for content layout */
-  max-width: 1200px; /* Setting a maximum width to prevent excessive stretching */
-  margin: 0 auto; /* Center the content horizontally */
-  gap: 20px; /* adjusts gap between flex items */
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
 }
 
 .blog-list {
@@ -672,6 +779,7 @@ main {
   z-index: -1;
   pointer-events: none;
 }
+
 /* For text styling */
 .old-relative::before {
   content: 'original location';
@@ -836,9 +944,6 @@ main {
 
 /* widescreen displays */
 @media only screen and (max-width: 1150px) {
-  main {
-    background-color: darkblue;
-  }
   .blog-section {
     gap: 2%;
     scale: 100%;
@@ -869,9 +974,6 @@ main {
 
 /* tablets */
 @media (max-width: 760px) {
-  main {
-    background-color: black;
-  }
   .line-1 {
     display: flex;
     flex-direction: column;
@@ -929,7 +1031,7 @@ main {
     height: 130vh;
   }
 }
-/* Weird Displays */
+/* weirdscreen displays */
 @media (max-width: 570px) {
   .header-nav-li {
     padding: 0;
