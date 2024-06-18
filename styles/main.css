@@ -201,7 +201,6 @@ main {
 }
 .raindrop-background {
   position: absolute;
-  background-color: #551556;
   min-height: 100vh;
   width: 100vw;
   top: 10vh;
