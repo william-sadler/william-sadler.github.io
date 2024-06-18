@@ -935,8 +935,8 @@ main {
     padding: 0;
     font-size: calc(1rem);
   }
-  .about-section img {
-    left: calc(-6rem);
+  .line-3 {
+    margin-left: 20vw;
   }
   .article-button {
     padding-left: 50px;
@@ -954,9 +954,8 @@ main {
     height: 80px;
     width: 80px;
   }
-  .welcome-text {
-    padding: auto;
-    margin: auto;
+  .line-3 {
+    font-size: calc(0.5rem + 1vw);
   }
   .blog-list nav {
     padding: 5px;
