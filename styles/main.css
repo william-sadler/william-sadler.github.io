@@ -338,18 +338,35 @@ main {
   padding: 0;
   margin: 0;
   line-height: 1;
+  text-shadow: -1px 5px rgb(160, 160, 160);
+  transition-duration: 0.1s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.l1-c1-l1 h1:hover {
+  text-shadow: -1px 7px rgb(160, 160, 160);
+}
+
 .l1-coloumn-1 p {
   color: #7a7a7a;
   font-size: calc(0.5rem + 0.5vw);
   font-weight: 300;
   margin: 30px 5px;
   max-width: 490px;
+  text-shadow: 2px 5px rgb(0, 0, 0);
 }
+
 .l1-coloumn-1 strong {
   color: #e6e6e6;
   margin: 10px 5px;
   max-width: 50%;
+  transition-duration: 0.1s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.l1-coloumn-1 strong:hover {
+  text-shadow: -0.5px 0.5px rgb(161, 161, 161);
 }
 
 .l1-coloumn-1 span {
@@ -407,10 +424,14 @@ main {
   background-color: #f5f5f5;
   border-radius: 40px;
   margin-right: 10px;
+  transition-duration: 0.1s;
+  transition-property: all;
+  box-shadow: -1px 1px 0px 0 rgb(44, 44, 44);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .article-button:hover {
-  box-shadow: 0 3px 8px 0 rgb(54, 54, 54);
-  color: #3c265f;
+  box-shadow: -1px 3px 1px 0 rgb(185, 185, 185);
+  color: #6e4ca3;
 }
 
 .article-button-arrow {
@@ -423,10 +444,14 @@ main {
   border-radius: 50%;
   display: flex;
   justify-content: center;
+  transition-duration: 0.1s;
+  transition-property: all;
+  box-shadow: -1px 1px 0px 0 rgb(44, 44, 44);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .article-button-arrow:hover {
-  box-shadow: 0 3px 8px 0 rgb(54, 54, 54);
-  color: #3c265f;
+  box-shadow: -1px 3px 1px 0 rgb(187, 187, 187);
+  color: #6e4ca3;
 }
 
 .l1-coloumn-2 h1 {
@@ -438,6 +463,14 @@ main {
   margin: 0;
   margin-top: 20px;
   line-height: 1;
+  text-shadow: 0px 5px rgb(160, 160, 160);
+  transition-duration: 0.1s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.l1-coloumn-2 h1:hover {
+  text-shadow: 0px 7px rgb(160, 160, 160);
 }
 
 .line-2 {
@@ -531,42 +564,89 @@ main {
     url(/images/stock-mountains.png);
   background-repeat: no-repeat;
   background-size: 100%;
-  min-height: 95vh; /* Ensures the minimum height of the 95% viewport height */
-  padding: 50px 20px; /* Adds padding for better visuals */
+  background-position: center;
+  min-height: 80vh; /* Ensures the minimum height of the 95% viewport height */
+  padding: 50px 20px 0 20px; /* Adds padding for better visuals */
+  user-select: none;
 }
 
 .blog-content {
   display: flex;
-  max-width: 1200px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 0 auto;
-  gap: 20px;
+  min-height: 100vh;
 }
 
 .blog-list {
-  width: 90%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
   height: 90%;
+}
+/* CSS animations for swiping out and swiping in */
+@keyframes swipeOut {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-150%);
+    opacity: 0;
+  }
+}
+
+@keyframes swipeIn {
+  0% {
+    transform: translateX(100%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.swipe-out {
+  animation: swipeOut 0.5s forwards;
+}
+
+.swipe-in {
+  animation: swipeIn 0.5s forwards;
 }
 
 .blog-list nav {
-  background-color: rgb(45, 41, 55);
-  border-radius: 5px;
-  padding: 10px 55px 30px 5px;
   margin-bottom: 10px;
   margin-top: 10px;
-  box-shadow: 100px rgb(0, 0, 0);
-  border: 1px solid rgb(81, 81, 81);
-  overflow: scroll;
 }
 
 .blog-list-tc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1%;
   list-style-type: none;
+  padding: 0;
+}
+#coreList {
+  margin-top: -50px;
+  margin-bottom: 50px;
 }
 
 .blog-button {
-  margin-bottom: 10px;
-  border: 1px solid rgba(145, 145, 145, 0.4);
+  border: 2px solid rgba(170, 170, 170, 0.4);
   border-radius: 5px;
   box-shadow: 0 3px 8px 0 rgb(36, 36, 36);
+  padding: 1px;
+  margin: 10px;
+  transition-duration: 0.7s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 0px 15px 15px 15px;
 }
 
 .blog-button:hover {
@@ -575,47 +655,97 @@ main {
   color: rgb(255, 252, 243);
   text-decoration: none;
 }
+/* For switching Blog type */
+.blog-content-buttontc {
+  display: flex;
+  justify-content: center;
+  color: rgb(255, 252, 243);
+  gap: 5%;
+}
 
-.blog-list-tc li a {
-  font-size: 1.1em;
+.blog-content-button {
   display: flex;
   align-items: center;
-  gap: 1%;
-  padding: 5%;
+  justify-content: center;
+  font-size: 1.5em;
+  font-style: italic;
+  font-weight: 500;
+  cursor: pointer;
+  color: white;
+  height: 60px;
+  width: 150px;
+  padding: 20px;
+  border: 2px solid rgba(112, 101, 121, 0.5);
+  border-radius: 10px;
+  background-color: #0d111700;
+  transition-duration: 0.1s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 0px 15px 15px 15px;
+}
+.blog-content-button:hover {
+  height: 60px;
+  width: 200px;
+  border: 1px solid rgba(95, 79, 107, 0.5);
+  box-shadow: 1px 4px 0 rgba(95, 79, 107, 0.5);
+  color: rgb(255, 252, 243);
+  text-decoration: none;
+}
+
+.blog-list-tc li a {
+  position: relative;
+  font-size: 0;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 10%;
+  overflow: hidden;
+  padding: 30vh 50px 30vh 50px;
+  transition-duration: 0.3s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.blog-list-tc li a:hover {
+  font-size: 1.1em;
+  padding: 35vh 150px 35vh 150px;
+  overflow: visible;
 }
 
 .date {
-  flex: 0 0 30px;
-  white-space: nowrap;
-  font-size: 10px;
+  position: absolute;
+  top: 80%;
+  min-width: 0;
   color: rgb(125, 125, 125);
-  order: 1;
 }
 
 .description {
-  flex: 0 0 10%;
-  white-space: nowrap;
-  font-size: 10px;
-  color: rgb(125, 125, 125);
-  order: 2;
+  position: absolute;
+  top: 50%;
+  min-width: 85%;
+  color: rgb(167, 167, 167);
 }
 
 .title {
-  flex: 1;
+  position: absolute;
+  top: 20%;
   min-width: 0;
-  text-align: left;
+  text-align: center;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
-  font-weight: 700;
+  font-weight: 800;
   color: white;
-  order: 3;
+}
+.blog-list-tc li a span.title {
+  font-size: 1.5em;
+  font-weight: 800;
 }
 
 .read-more {
+  position: absolute;
+  bottom: 20px;
   flex: 0 0 auto;
-  font-size: 15px;
-  order: 4;
 }
 
 .blog-list a:link {
@@ -633,10 +763,6 @@ main {
   text-decoration: none;
 }
 
-.title:hover {
-  color: rgb(254, 212, 157);
-}
-
 .blog-list a:hover {
   color: orange;
   text-decoration: none;
@@ -647,6 +773,103 @@ main {
   text-decoration: none;
 }
 
+/* -- Blog Thumbnail Images -- */
+
+/* TECH */
+#tech0 a {
+  background-image: linear-gradient(
+      rgba(13, 17, 23, 0.863),
+      rgba(13, 17, 23, 0.712)
+    ),
+    url(/images/side-shot-code-editor-using-react-js-stock.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(5px);
+  transition-duration: 0.5s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+#tech1 a {
+  background-image: linear-gradient(
+      rgba(13, 17, 23, 0.863),
+      rgba(13, 17, 23, 0.712)
+    ),
+    url(/images/web-design-laptop-stock.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(5px);
+  transition-duration: 0.5s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#tech2 a {
+  background-image: linear-gradient(
+      rgba(13, 17, 23, 0.842),
+      rgba(13, 17, 23, 0.637)
+    ),
+    url(/images/maori-pattern-stock.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: blur(5px);
+  transition-duration: 0.5s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* CORE */
+#core0 a {
+  background-image: linear-gradient(
+      rgba(13, 17, 23, 0.842),
+      rgba(13, 17, 23, 0.637)
+    ),
+    url(/images/learning-plan-stock.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: blur(5px);
+  transition-duration: 0.5s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+#core1 a {
+  background-image: linear-gradient(
+      rgba(13, 17, 23, 0.842),
+      rgba(13, 17, 23, 0.637)
+    ),
+    url(/images/black-white-background-with-tree-stock.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: blur(5px);
+  transition-duration: 0.5s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+#core2 a {
+  background-image: linear-gradient(
+      rgba(13, 17, 23, 0.842),
+      rgba(13, 17, 23, 0.637)
+    ),
+    url(/images/gradient-mental-health-stock.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: blur(5px);
+  transition-duration: 0.5s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#tech0 a:hover,
+#tech1 a:hover,
+#tech2 a:hover,
+#core0 a:hover,
+#core1 a:hover,
+#core2 a:hover,
+.blog-button a:hover {
+  filter: blur(0);
+}
 /* Blog Page Classes blog-post */
 
 .blog-background-img {
