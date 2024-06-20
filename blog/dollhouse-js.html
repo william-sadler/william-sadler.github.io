@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Dollhouse</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        display: flex;
+        flex-direction: row;
+        font-family: Arial, sans-serif;
+      }
+      button {
+        margin: 10px;
+        padding: 10px;
+        transition-duration: 0.1s;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      button:hover {
+        box-shadow: 1px 3px 4px 1px #a5a5a5;
+        background: rgb(241, 241, 241);
+        cursor: pointer;
+      }
+      .room {
+        width: 200px;
+        height: 200px;
+        border: 1px solid #000;
+        margin: 10px;
+        padding: 10px;
+      }
+      #living-room {
+        background-color: lightblue;
+      }
+      #kitchen {
+        background-color: lightgreen;
+      }
+      #bedroom {
+        background-color: lightpink;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="toggleLights()">Toggle Lights</button>
+    <div class="room" id="living-room">Living Room</div>
+    <div class="room" id="kitchen">Kitchen</div>
+    <div class="room" id="bedroom">Bedroom</div>
+    <script>
+      function toggleLights() {
+        let room = document.getElementById('living-room')
+        if (room.style.backgroundColor === 'lightblue') {
+          room.style.backgroundColor = 'darkblue'
+          room.style.color = 'white'
+        } else {
+          room.style.backgroundColor = 'lightblue'
+          room.style.color = 'black'
+        }
+      }
+    </script>
+  </body>
+</html>

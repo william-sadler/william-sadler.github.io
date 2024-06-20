@@ -11,11 +11,13 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <!-- Prism.js CSS -->
     <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism-okaidia.min.css"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css"
     />
+    <!-- Prism.js JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
   </head>
   <!-- Navigation Bar -->
   <header>
@@ -54,54 +56,380 @@
           <div>
             <h3>Fundamentals of JavaScript</h3>
             <!-- Question 1 -->
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
+            <p>
+              Ever built a Lego house that looked amazing but couldn't do
+              anything? That's HTML and CSS for you - the bricks and the paint
+              job. JavaScript is the invisible magic that brings your creation
+              to life. It's the secret sauce that makes websites interactive,
+              dynamic, and downright fun! Imagine clicking a button and watching
+              colors change, text appear, or animations dance across the screen.
+              That's JavaScript at work.
+            </p>
+            <p>
+              If you've dabbled in HTML and CSS, you've laid the groundwork for
+              a fantastic digital adventure. Now, it's time to inject some
+              personality and pizzazz into your projects. This blog post will be
+              your guide, your companion on the journey to mastering JavaScript
+              fundamentals. We'll start with the basics, explore essential
+              concepts, and even sprinkle in some code examples to get your
+              creative juices flowing. By the end, you'll be armed with the
+              knowledge and skills to transform your static webpages into
+              interactive masterpieces.
+            </p>
           </div>
           <div>
-            <h3></h3>
+            <h3>JavaScript and its relationship to HTML and CSS.</h3>
             <!-- Question 2 -->
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
+            <p>
+              Let's begin by describing the relationship between JavaScript,
+              HTML, and CSS. I've already mentioned the basics: "HTML being the
+              bricks of a Lego house, while CSS is the color, shape, and size of
+              those bricks." JavaScript, however, needs a more comprehensive
+              analogy to better explain what it can do – and it can do a lot!
+            </p>
+            <p>
+              Imagine a well-crafted dollhouse. The HTML is like the structure
+              of the house – the walls, floors, and roof. It defines the layout
+              and where each room and element should be. It looks something like
+              this:
+            </p>
+            <h3>HTML</h3>
+            <section class="blog-example">
+              <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My Dollhouse&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class="room" id="living-room"&gt;Living Room&lt;/div&gt;
+    &lt;div class="room" id="kitchen"&gt;Kitchen&lt;/div&gt;
+    &lt;div class="room" id="bedroom"&gt;Bedroom&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+              </code></pre>
+            </section>
+            <h2>Dollhouse Design</h2>
+            <section class="blog-example-iframe">
+              <iframe
+                src="/blog/dollhouse.html"
+                width="100%"
+                height="400px"
+                style="border: none"
+              ></iframe>
+            </section>
+            <p>
+              The CSS is like the interior design – the paint colors, wallpaper
+              patterns, furniture styles, and decorations. It gives the house
+              its unique look and feel. It looks something like this:
+            </p>
+            <h3>CSS</h3>
+            <section class="blog-example">
+              <pre><code class="language-css">
+body {
+  display: flex;
+  flex-direction: row;
+  font-family: Arial, sans-serif;
+}
+.room {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #000;
+  margin: 10px;
+  padding: 10px;
+}
+#living-room {
+  background-color: lightblue;
+}
+#kitchen {
+  background-color: lightgreen;
+}
+#bedroom {
+  background-color: lightpink;
+}
+            </code></pre>
+            </section>
+            <h2>Dollhouse Design</h2>
+            <section class="blog-example-iframe">
+              <iframe
+                src="/blog/dollhouse-css.html"
+                width="100%"
+                height="400px"
+                style="border: none"
+              ></iframe>
+            </section>
+            <p>
+              But even with a stunning structure and design, the dollhouse lacks
+              life and interactivity. That's where JavaScript steps in.
+              JavaScript is like the puppeteer who brings the dollhouse to life.
+              It can open and close doors, turn lights on and off, make the tiny
+              inhabitants dance, and even change the layout of the house on the
+              fly! Just like a puppeteer controls the actions of the dolls,
+              JavaScript controls the behavior and interactivity of a website.
+              It responds to user actions like clicks, hovers, and scrolls, and
+              updates the HTML and CSS to create dynamic and engaging
+              experiences.
+            </p>
+            <h3>Javascript</h3>
+            <section class="blog-example">
+              <pre><code class="language-js">
+function toggleLights() {
+  let room = document.getElementById('living-room');
+  if (room.style.backgroundColor === 'lightblue') {
+    room.style.backgroundColor = 'darkblue';
+    room.style.color = 'white'
+  } else {
+    room.style.backgroundColor = 'lightblue';
+  }
+}
+            </code></pre>
+            </section>
+            <h2>Dollhouse Design</h2>
+            <section class="blog-example-iframe">
+              <iframe
+                src="/blog/dollhouse-js.html"
+                width="100%"
+                height="400px"
+                style="border: none"
+              ></iframe>
+            </section>
+            <p>
+              But JavaScript's power extends beyond mere puppetry! It's also the
+              brains of the dollhouse, capable of storing information, making
+              decisions, and even communicating with the outside world!
+              JavaScript can remember user preferences, track game scores, fetch
+              data from external sources, and update the website's content in
+              real-time. It's like if you and a friend were role-playing inside
+              the dollhouse, keeping track of various shenanigans you get up to
+              along the way – JavaScript keeps track of information and what you
+              have been up to in a similar fashion, making the website smarter
+              and more responsive to your actions!
+            </p>
+            <p>
+              With JavaScript, the possibilities are endless. You can create
+              interactive games, build complex animations, validate user input,
+              and even create entire web applications that run within the
+              browser. JavaScript is a versatile and powerful tool that empowers
+              web developers to build immersive and dynamic experiences that go
+              far beyond static HTML and CSS. Just like a master puppeteer can
+              create an entire world within a dollhouse, a skilled JavaScript
+              developer can create an entire universe within a website.
+            </p>
           </div>
           <div>
-            <h3></h3>
+            <h3>Control Flow and Loops</h3>
             <!-- Question 3 -->
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
+            <p>
+              Now it's time to dive into some basic concepts you should know
+              when it comes to writing javascript! starting at Control Flow:
+            </p>
+            <p>
+              Control flow is the order in which the computer executes
+              statements in a script. Code is run in order from the first line
+              in the file to the last line, unless the computer runs across the
+              (extremely frequent) structures that change the control flow, such
+              as conditionals and loops!
+            </p>
+            <h4>Making a Sandwich</h4>
+            <p>
+              We are pretty smart when it comes to language, and I'll explain
+              what I mean. If I told you, "I made a sandwich," you could
+              probably easily imagine the process of making a sandwich! You
+              follow a specific order: grab bread, add meat, cheese, veggies,
+              and maybe some sauce. While you can't simply ask your computer to
+              make a sandwich, it does complete a process one step at a time.
+              This ordered process is known as control flow in programming. It
+              dictates the steps your code takes, one after the other.
+            </p>
+            <p>
+              But what if I wanted to make two sandwiches? That's where loops
+              come in! Loops are like repeating a part of the sandwich-making
+              process. You'd loop through the "add ingredient" step multiple
+              times, placing bread, meat, cheese, etc., until you have the
+              desired number of layers for your next sandwich. In code, a loop
+              lets you repeat a block of instructions as many times as needed.
+            </p>
+            <h4>Making Multiple Sandwiches</h4>
+            <section class="blog-example">
+              <pre><code class="language-js">
+for (let sandwichCount = 0; sandwichCount &lt; 3; sandwichCount++) { 
+  console.log("Grab bread"); 
+  console.log("Add meat and cheese"); 
+  console.log("Add veggies"); 
+  console.log("Enjoy your sandwich!");
+}
+            </code></pre>
+            </section>
+            <p>
+              This code creates three sandwiches. The for loop controls how many
+              times we repeat the steps inside the curly braces {}. Each time
+              through the loop, we increment sandwichCount. The loop continues
+              as long as sandwichCount is less than 3.
+            </p>
+            <p>
+              Now you know what control flow is! Each instruction is executed
+              one after the other, "from top to bottom," until it reaches a
+              loop. The loop repeats a set of instructions until it has reached
+              the desired number of repetitions. I hope you're keeping up,
+              because this is a lot of information!
+            </p>
           </div>
           <div>
-            <h3></h3>
+            <h3>The All Important DOM</h3>
             <!-- Question 4 -->
-            <p></p>
-            <p></p>
-            <p></p>
+            <p>
+              Now that we have the basics for the relationship between
+              Javascript, CSS and HTML and have some fundamentals for how
+              control flow and loops interact inside of Javascript. Let's talk
+              about how all of these parts fit together! This is the special
+              sauce and it's one of the most important parts, when it comes to
+              bringing your website to life!!
+            </p>
+            <p>
+              The Document Object Model (DOM) is the heart of interactive web
+              development! Think of it as a living representation of your web
+              page's structure, content, and styling. When your browser loads a
+              website, It's a tree-like structure representing every element on
+              your webpage: headings, paragraphs, images, buttons, and more.
+              Think of it as a map of your website's structure, where each
+              element is a node in this tree.
+            </p>
+            <div class="example-dom-img">img</div>
+            <p>
+              JavaScript on its own is a powerful programming language however,
+              while JavaScript grants you the power to create worlds onto
+              themself, it cannot directly manipulate the visual structure of a
+              webpage on its own. This is where Web APIs, like the DOM, step in.
+              They serve as intermediaries, exposing methods and properties that
+              allow JavaScript to "talk" to the browser and access the
+              document's content. Without these APIs, JavaScript would be
+              limited to internal calculations and wouldn't be able to create
+              the dynamic, engaging experiences we expect from modern websites.
+            </p>
+            <p>
+              The DOM allows you to select specific elements using methods like
+              document.getElementById, document.querySelector, or
+              document.querySelectorAll. Once you have a reference to an
+              element, you can change its content, style, or even add and remove
+              elements entirely. This dynamic manipulation is how you create
+              interactive features like dropdown menus, image sliders, and
+              real-time updates.
+            </p>
+            <h4>Example Button</h4>
+            <section class="blog-example">
+              <pre><code class="language-js">
+const myButton = document.getElementById("myButton"); // Find the button in the DOM
+myButton.textContent = "Click Me!"; // Change the button's text
+myButton.style.backgroundColor = "green"; // Change the button's background color
+myButton.addEventListener("click", function() { 
+  alert("You clicked the button!"); // Make something happen when the button is clicked
+});
+            </code></pre>
+            </section>
+            <button id="myButton"></button>
+            <script>
+              const myButton = document.getElementById('myButton') // Find the button in the DOM
+              myButton.textContent = 'Click Me!' // Change the button's text
+              myButton.style.backgroundColor = 'green' // Change the button's background color
+              myButton.addEventListener('click', function () {
+                alert('You clicked the button!') // Make something happen when the button is clicked
+              })
+            </script>
+            <p>
+              In this snippet, document.getElementById is a DOM method that
+              searches the DOM tree for an element with the ID "myButton." Once
+              found, we can modify its properties (like text and style) or add
+              event listeners to trigger actions (like the alert) when the
+              button is clicked. This is just the tip of the iceberg—the DOM
+              offers a wide array of methods to interact with your web page,
+              making it a vital tool for creating dynamic and interactive
+              websites.
+            </p>
+            <p>
+              The DOM transforms a static HTML document into a living, breathing
+              entity. By combining the power of JavaScript with the structure of
+              the DOM, you unlock endless possibilities for creating engaging
+              and interactive web experiences. The DOM is a fundamental concept
+              for any aspiring web developer, as it empowers you to build
+              websites that respond to user input, update in real-time, and
+              deliver dynamic content.
+            </p>
           </div>
           <div>
-            <h3></h3>
+            <h3>Arrays and Objects</h3>
             <!-- Question 5 -->
-            <p></p>
-            <p></p>
-            <p></p>
+            <p>
+              Arrays and objects are both ways to store data, similar to how an
+              old phone book or a contacts list on your phone stores
+              information. While both are used to store data, they do so in
+              different ways and have different methods for accessing and
+              displaying that data.
+            </p>
+            <h4>Ordered Collections vs. Key-Value Pairs</h4>
+            <p>
+              Arrays are like organized lists. They hold an ordered collection
+              of data, where each item has a numerical index starting from zero.
+              Accessing elements in an array is straightforward: you use their
+              index within square brackets (myArray[2]). This is ideal for
+              storing sequences of values where the order matters, like a list
+              of names or a series of steps in a process.
+            </p>
+            <h4>Arrays</h4>
+            <section class="blog-example">
+              <pre><code class="language-js">
+// Creating an array
+let myArray = ['Alice', 'Bob', 'Charlie'];
+                
+// Accessing elements
+console.log(myArray[0]); // Outputs: Alice
+console.log(myArray[2]); // Outputs: Charlie
+            </code></pre>
+            </section>
+            <p>Objects, on the other hand, are collections of key-value pairs. Each piece of data is associated with a unique key (a string), which acts as its label. To access values in an object, you use either dot notation (myObject.name) or bracket notation with the key as a string (myObject['age']). Objects are great for representing structured data, like a person's profile (with keys like "name," "age," and "address") or the settings for an application.</p>
+            <h4>Objects</h4>
+            <section class="blog-example">
+              <pre><code class="language-js">
+// Creating an object
+let myObject = {
+  name: 'Alice',
+  age: 25,
+  address: '123 Main St'
+};
+            </code></pre>
+            </section>
+            <h4>Numerical Indices vs. String Keys</h4>
+            <p>The fundamental difference in how you access data stems from this distinction in structure. With arrays, you're working with numerical indices to pinpoint specific items in a sequence. This makes it easy to iterate over arrays using loops. With objects, you're using descriptive string keys to access particular values. This makes objects more flexible for representing complex data structures, but you'll often need to know the exact key names to retrieve the information you want.</p>
           </div>
           <div>
-            <h3></h3>
+            <h3>Functions</h3>
             <!-- Question 6 -->
-            <p></p>
-            <p></p>
-            <p></p>
+            <p>Let's go back to the control flow analogy, when I was talking about how control flow operates through a step by step process and how we as people can take a simple phrase like make a sandwich, bake a cake or build a house and understand that it's a step by step process that dictates certain actions? Well computers actually can be asked to make a sandwich! But it's not as simple, let me explain:</p>
+            <p>Imagine giving a computer a vague instruction like "make a sandwich." It wouldn't know where to start! Functions solve this problem by breaking down complex tasks into manageable steps, much like a recipe. In programming, a function is a reusable block of code that performs a specific action. It's similar to a loop but not quite! Giving the computer that detailed list of instructions: get bread, add meat, add cheese, and so on. By organizing code into functions, you make your programs more organized, easier to read, and less prone to errors.</p>
+            <h4>Function</h4>
+            <section class="blog-example">
+              <pre><code class="language-js">
+function makeSandwich(filling) {
+  console.log("Get two slices of bread.");
+  console.log("add " + filling + " on one slice.");
+  console.log("Put the slices together.");
+  console.log("Enjoy your sandwich!");
+}
+            </code></pre>
+            </section>
+            <p>The true power of functions lies in their reusability. Instead of writing the same code repeatedly for similar tasks, you define a function once and call it whenever needed. This not only saves time and effort but also makes your code more efficient. Think of a function like a kitchen appliance – <strong>you don't rebuild a blender every time you want a smoothie;</strong> you simply use it whenever you need it. Functions allow you to create modular code that's easy to maintain and adapt to different situations.
+            </p>
+            <h4>Calling a Function</h4>
+            <section class="blog-example">
+              <pre><code class="language-js">
+makeSandwich("peanut butter and jam"); // Call the function with a specific filling
+makeSandwich("ham and cheese");        // Call the function again with a different filling
+            </code></pre>
           </div>
           <div>
-            <h3></h3>
+            <h3>You did it!</h3>
             <!-- Question 7 -->
-            <p></p>
-            <p></p>
-            <p></p>
+            <p>You've embarked on a long journey through the foundational concepts of JavaScript and its interaction with the web page through the DOM. We've explored how functions, loops, objects, arrays and control flow are essential building blocks for organizing and manipulating data. We've seen how the DOM provides a structured representation of your web page, enabling JavaScript to dynamically update content, styles, and user interactions. These core concepts form the bedrock of your web development toolkit, empowering you to craft interactive and engaging online environments.</p>
+            <p>If you haven't already, I implore you to take a moment to digest this wealth of information and pat yourself on the back for getting to the end! I hope with the help of this blog post, these concepts have begun to solidify in your mind as you experiment and apply them in your own projects. Remember, learning is a continuous process, and the web development landscape is constantly evolving! If you're eager to dive deeper, I encourage you to explore my other blog posts or dive into the rich resources available online. With dedication and practice, you'll soon be confidently wielding JavaScript and the DOM to bring your web development visions to life!</p>
           </div>
         </section>
       </article>
