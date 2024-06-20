@@ -149,3 +149,13 @@ const coreButton = () => {
 displayBlogPosts('tech', categorizedBlogPosts)
 document.getElementById('tech').onclick = techButton
 document.getElementById('core').onclick = coreButton
+
+// -- HEADER VISUAL TRANSITION EFFECT -- //
+document.querySelectorAll('nav a').forEach((anchor) => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault()
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth',
+    })
+  })
+})
