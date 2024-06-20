@@ -301,7 +301,7 @@ main {
   }
 }
 
-.about-section img {
+.portfolio-photo {
   background-image: linear-gradient(
       rgba(29, 28, 33, 0.432),
       rgba(87, 87, 87, 0.959)
@@ -478,8 +478,30 @@ main {
   flex-direction: row;
   gap: 5%;
   margin-top: 70px;
-  max-width: 55%;
+  margin-right: 40%;
   justify-content: center;
+}
+.line-2 a {
+  position: relative;
+}
+.line-2 a img {
+  height: 50px;
+  width: 50px;
+  object-fit: contain;
+  cursor: pointer;
+  padding: 7px;
+  border: 1px solid white;
+  border-radius: 45%;
+  transition-duration: 0.2s;
+  transition-property: all;
+  box-shadow: 0 0 0 3px rgb(41, 41, 41);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line-2 a img:hover {
+  box-shadow: 0 0 8px 2px rgb(255, 255, 255);
+  background-color: #121212;
+  transform: scale(1.2);
+  z-index: 10;
 }
 
 .line-3 {
