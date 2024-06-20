@@ -910,6 +910,18 @@ main {
   display: flex;
   flex-direction: column;
 }
+.blog-background-img-exmaple {
+  background-image: linear-gradient(
+      rgba(13, 17, 23, 0.842),
+      rgba(13, 17, 23, 0.637)
+    ),
+    url(/images/web-design-laptop-stock.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 95vh; /* background covers viewport height */
+  display: flex;
+  flex-direction: column;
+}
 
 .blog-background-img-LP {
   background-image: linear-gradient(
@@ -963,6 +975,19 @@ main {
   display: flex;
   flex-direction: column;
 }
+.blog-background-img-exmaple {
+  background-image: linear-gradient(
+      rgba(13, 17, 23, 0.842),
+      rgba(13, 17, 23, 0.637)
+    ),
+    url(/images/side-shot-code-editor-using-react-js-stock.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 95vh; /* background covers viewport height */
+  display: flex;
+  flex-direction: column;
+}
+
 .blog-body {
   position: relative;
   z-index: 1;

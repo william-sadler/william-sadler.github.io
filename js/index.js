@@ -3,7 +3,7 @@ const blogPosts = [
   // ... latest posts go here
   {
     title: 'JavaScript Fundamentals',
-    href: '#',
+    href: '/blog/javascript-dom.html',
     description:
       'Unlock the basics of JavaScript! Start your journey in web interactivity!',
     type: 'tech',
@@ -51,7 +51,7 @@ const blogPosts = [
     description:
       'Learn about the fascinating world of Emotional Intelligence (EQ) and Intelligence Quotient (IQ).',
     type: 'core',
-    date: 'Nov 10',
+    date: 'Jun 15',
     year: 2024,
   },
 ]
