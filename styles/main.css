@@ -672,6 +672,7 @@ main {
 }
 
 .blog-button:hover {
+  transform: scale(1.1);
   border: 1px solid rgba(95, 79, 107, 0.5);
   box-shadow: 0 3px 8px 0 rgb(0, 0, 0);
   color: rgb(255, 252, 243);
@@ -764,6 +765,9 @@ main {
   font-weight: 800;
 }
 
+.blog-list-tc li a span.read-more:hover {
+  color: rgb(116, 76, 143);
+}
 .read-more {
   position: absolute;
   bottom: 20px;
