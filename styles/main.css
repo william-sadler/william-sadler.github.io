@@ -667,25 +667,6 @@ main {
   margin-bottom: 50px;
 }
 
-.blog-button {
-  border: 2px solid rgba(170, 170, 170, 0.4);
-  border-radius: 5px;
-  box-shadow: 0 3px 8px 0 rgb(36, 36, 36);
-  padding: 1px;
-  margin: 10px;
-  transition-duration: 0.7s;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  margin: 0px 15px 15px 15px;
-}
-
-.blog-button:hover {
-  transform: scale(1.1);
-  border: 1px solid rgba(95, 79, 107, 0.5);
-  box-shadow: 0 3px 8px 0 rgb(0, 0, 0);
-  color: rgb(255, 252, 243);
-  text-decoration: none;
-}
 /* For switching Blog type */
 .blog-content-buttontc {
   display: flex;
@@ -719,6 +700,26 @@ main {
   width: 200px;
   border: 1px solid rgba(95, 79, 107, 0.5);
   box-shadow: 1px 4px 0 rgba(95, 79, 107, 0.5);
+  color: rgb(255, 252, 243);
+  text-decoration: none;
+}
+
+.blog-button {
+  border: 2px solid rgba(170, 170, 170, 0.4);
+  border-radius: 5px;
+  box-shadow: 0 3px 8px 0 rgb(36, 36, 36);
+  padding: 1px;
+  margin: 10px;
+  transition-duration: 0.7s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 0px 15px 15px 15px;
+}
+
+.blog-button:hover {
+  transform: scale(1.1);
+  border: 1px solid rgba(95, 79, 107, 0.5);
+  box-shadow: 0 3px 8px 0 rgb(0, 0, 0);
   color: rgb(255, 252, 243);
   text-decoration: none;
 }
