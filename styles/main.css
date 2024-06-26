@@ -108,11 +108,13 @@
 /* ^ Font Settings ^ */
 
 :root {
-  background-color: #121212;
+  background-image: linear-gradient(#0d1117, #0d1117);
   color: white;
   font-family: 'poppins', sans-serif;
 }
-
+#top {
+  background-color: #121212 !important;
+}
 body {
   margin: 0;
 }
@@ -816,7 +818,7 @@ main {
       rgba(13, 17, 23, 0.863),
       rgba(13, 17, 23, 0.712)
     ),
-    url(/images/side-shot-code-editor-using-react-js-stock.png);
+    url(/images/puzzle-solving-stock.png);
   background-repeat: no-repeat;
   background-size: cover;
   filter: blur(5px);
@@ -829,7 +831,7 @@ main {
       rgba(13, 17, 23, 0.863),
       rgba(13, 17, 23, 0.712)
     ),
-    url(/images/web-design-laptop-stock.png);
+    url(/images/side-shot-code-editor-using-react-js-stock.png);
   background-repeat: no-repeat;
   background-size: cover;
   filter: blur(5px);
@@ -839,6 +841,19 @@ main {
 }
 
 #tech2 a {
+  background-image: linear-gradient(
+      rgba(13, 17, 23, 0.863),
+      rgba(13, 17, 23, 0.712)
+    ),
+    url(/images/web-design-laptop-stock.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(5px);
+  transition-duration: 0.5s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+#tech3 a {
   background-image: linear-gradient(
       rgba(13, 17, 23, 0.842),
       rgba(13, 17, 23, 0.637)
@@ -858,7 +873,7 @@ main {
       rgba(13, 17, 23, 0.842),
       rgba(13, 17, 23, 0.637)
     ),
-    url(/images/learning-plan-stock.png);
+    url(/images/sitting-around-a-fire-pit-stock.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -872,7 +887,7 @@ main {
       rgba(13, 17, 23, 0.842),
       rgba(13, 17, 23, 0.637)
     ),
-    url(/images/black-white-background-with-tree-stock.png);
+    url(/images/lotus-pond-stock.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -882,6 +897,34 @@ main {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 #core2 a {
+  background-image: linear-gradient(
+      rgba(13, 17, 23, 0.842),
+      rgba(13, 17, 23, 0.637)
+    ),
+    url(/images/learning-plan-stock.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: blur(5px);
+  transition-duration: 0.5s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+#core3 a {
+  background-image: linear-gradient(
+      rgba(13, 17, 23, 0.842),
+      rgba(13, 17, 23, 0.637)
+    ),
+    url(/images/black-white-background-with-tree-stock.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: blur(5px);
+  transition-duration: 0.5s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+#core4 a {
   background-image: linear-gradient(
       rgba(13, 17, 23, 0.842),
       rgba(13, 17, 23, 0.637)
@@ -899,9 +942,12 @@ main {
 #tech0 a:hover,
 #tech1 a:hover,
 #tech2 a:hover,
+#tech3 a:hover,
 #core0 a:hover,
 #core1 a:hover,
 #core2 a:hover,
+#core3 a:hover,
+#core4 a:hover,
 .blog-button a:hover {
   filter: blur(0);
 }
@@ -1008,17 +1054,91 @@ main {
   display: flex;
   flex-direction: column;
 }
-
+.blog-background-img-UN {
+  background-image: linear-gradient(
+      rgba(13, 17, 23, 0.842),
+      rgba(13, 17, 23, 0.637)
+    ),
+    url(/images/lotus-pond-stock.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 10px;
+  min-height: 95vh; /* background covers viewport height */
+  display: flex;
+  flex-direction: column;
+}
+.blog-background-img-TWTW {
+  position: relative;
+  width: 100%;
+  height: 95vh;
+  overflow: hidden; /* Optional: if you want to hide overflow */
+  background-image: linear-gradient(
+      rgba(13, 17, 23, 0.842),
+      rgba(13, 17, 23, 0.637)
+    ),
+    url(/images/tewharetapawha-concept.png),
+    url(/images/tewharetapawha-concept-background.png),
+    url(/images/sitting-around-a-fire-pit-stock.png);
+  background-size: cover, cover, cover;
+  background-position: center, center, center;
+}
+.blog-background-img-TWTW::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(/images/tewharetapawha-concept-background.png),
+    url(/images/sitting-around-a-fire-pit-stock.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(4px); /* Adjust blur intensity */
+  z-index: 1;
+}
+.blog-background-img-TWTW::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  background-image: linear-gradient(
+      rgba(13, 17, 23, 0.842),
+      rgba(13, 17, 23, 0.637)
+    ),
+    url(/images/tewharetapawha-concept.png);
+  z-index: 2;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.TWTW-img {
+  position: relative;
+  background-color: #0d111715;
+  display: flex;
+  justify-content: center;
+}
+.TWTW-img img {
+  position: relative;
+  height: 80%;
+  width: 80%;
+  z-index: -1;
+}
 .blog-body {
   position: relative;
-  z-index: 1;
-  background-image: linear-gradient(#0d1117, #0d1117);
+  z-index: 5;
+  background-color: #00000000;
 }
 
 .blog-header {
   display: flex;
-  margin: auto;
+  justify-content: center;
+  margin: 25vh auto;
   font-size: calc(1rem + 1.5vw);
+  z-index: 5;
 }
 
 .blog-subheader {

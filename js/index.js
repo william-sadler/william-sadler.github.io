@@ -2,6 +2,32 @@
 const blogPosts = [
   // ... latest posts go here
   {
+    title: 'Problem Solving',
+    href: '/blog/problem-solving.html',
+    description:
+      'I answer question about problem solving with the sprint 4 material.',
+    type: 'tech',
+    date: 'Jun 25',
+    year: 2024,
+  },
+  {
+    title: 'Te Whare Tapa Whā',
+    href: '/blog/te-whare-tapa-wha.html',
+    description: 'Learn why Te Whare Tapa Whā is relevant to your learning.',
+    type: 'core',
+    date: 'Jun 24',
+    year: 2024,
+  },
+  {
+    title: 'Understanding Neuroplasticity',
+    href: '/blog/neuroplasticity.html',
+    description:
+      'Understand what neuroplasticity is, through personal questions I answer.',
+    type: 'core',
+    date: 'Jun 24',
+    year: 2024,
+  },
+  {
     title: 'JavaScript Fundamentals',
     href: '/blog/javascript-dom.html',
     description:
