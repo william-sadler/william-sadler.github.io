@@ -996,6 +996,18 @@ main {
   display: flex;
   flex-direction: column;
 }
+.blog-background-img-PS {
+  background-image: linear-gradient(
+      rgba(13, 17, 23, 0.842),
+      rgba(13, 17, 23, 0.637)
+    ),
+    url(/images/puzzle-solving-stock.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 95vh; /* background covers viewport height */
+  display: flex;
+  flex-direction: column;
+}
 
 .blog-body {
   position: relative;
