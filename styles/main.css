@@ -1421,7 +1421,7 @@ main {
     position: absolute;
     right: calc(1% + 1vw);
   }
-  .about-section img {
+  .portfolio-photo {
     margin-top: -170px;
   }
   .blog-list {
@@ -1461,6 +1461,9 @@ main {
     justify-content: center;
     max-width: 100%;
   }
+  .line-2 img {
+    margin-bottom: -30px;
+  }
   .line-3 {
     position: relative;
     max-width: 50%;
@@ -1469,9 +1472,9 @@ main {
     margin: 30px;
     margin-right: 20%;
   }
-  .about-section img {
+  .portfolio-photo {
     position: absolute;
-    bottom: 250px;
+    bottom: 270px;
     left: calc(-5rem);
     width: calc(50%);
     height: 250px;
@@ -1515,9 +1518,27 @@ main {
   .line-3 {
     margin-left: 20vw;
   }
+  .line-2 {
+    margin-right: 0px;
+  }
   .article-button {
     padding-left: 50px;
     padding-right: 50px;
+  }
+  .blog-list {
+    width: auto;
+    margin: 0px;
+    padding: 0px;
+  }
+  .blog-list-tc {
+    gap: 3%;
+  }
+  .blog-list-tc li a {
+    gap: 0;
+    padding: 20vh 5vw 20vh 5vw;
+  }
+  .blog-button {
+    margin: 0px;
   }
 }
 
