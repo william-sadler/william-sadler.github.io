@@ -712,7 +712,7 @@ main {
   box-shadow: 0 3px 8px 0 rgb(36, 36, 36);
   padding: 1px;
   margin: 10px;
-  transition-duration: 0.7s;
+  transition-duration: 0.1s;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   margin: 0px 15px 15px 15px;
