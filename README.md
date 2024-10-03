@@ -58,7 +58,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 For any inquiries or feedback, please feel free to reach out:
 
 - **Email**: [williamsadler37@gmail.com](mailto:williamsadler37@gmail.com)
-- **LinkedIn**: [Your LinkedIn Profile](https://www.linkedin.com/in/william-sadler-nz)
+- **LinkedIn**: [My LinkedIn Profile](https://www.linkedin.com/in/william-sadler-nz)
 
 ---
 
